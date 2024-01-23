@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/jdeng/silk2wav"
+	"github.com/arctan90/silk2wav"
 	"io/ioutil"
 	"log"
 	"os"
