@@ -18,7 +18,6 @@ Tested under
 # Usage
 
 ```bash
-chmod 755 ./bin/wechat2wav
 ./bin/wechat2wav inputfile outputfile
 ```
 
