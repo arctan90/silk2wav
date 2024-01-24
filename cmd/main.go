@@ -1,20 +1,18 @@
 package main
 
 import (
-	"fmt"
 	"github.com/arctan90/silk2wav"
-	"io/ioutil"
 	"log"
 	"os"
 )
 
 func main() {
 	if len(os.Args) != 3 {
-		fmt.Printf("Usage: %s inputfile outputfile\n", os.Args[0])
+		log.Printf("Usage: %s inputfile outputfile\n", os.Args[0])
 		return
 	}
 
-	data, err := ioutil.ReadFile(os.Args[1])
+	data, err := os.ReadFile(os.Args[1])
 	if err != nil {
 		log.Println(err)
 		return
@@ -26,6 +24,8 @@ func main() {
 		return
 	}
 
-	ioutil.WriteFile(os.Args[2], out, 0755)
+	if err := os.WriteFile(os.Args[2], out, 0755); err != nil {
+		log.Printf("main.go write file failed: %s\n", err.Error())
+	}
 	log.Printf("Converted %s to %s\n", os.Args[1], os.Args[2])
 }

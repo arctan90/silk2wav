@@ -94,7 +94,9 @@ func Convert(buf []byte) ([]byte, error) {
 	}
 
 	var b bytes.Buffer
-	binary.Write(&b, binary.LittleEndian, hdr)
+	if err := binary.Write(&b, binary.LittleEndian, hdr); err != nil {
+		log.Printf("binary.Write failed: %s", err.Error())
+	}
 	b.Write(out)
 	return b.Bytes(), nil
 }
