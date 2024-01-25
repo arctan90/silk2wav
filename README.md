@@ -4,7 +4,12 @@ Convert wechat audio files (Skype silk format) to wav format
 
 # Build
 
-`go build -o ./bin/wechat2wav ./cmd`
+```bash
+# build
+make
+# clean
+make clean
+```
 
 Tested under
 
