@@ -23,7 +23,7 @@ Tested under
 # Usage
 
 ```bash
-./bin/wechat2wav inputfile outputfile
+./bin/wechat2wav_macos inputfile outputfile
 ```
 
 # License
