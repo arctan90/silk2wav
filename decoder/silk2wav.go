@@ -1,4 +1,4 @@
-package silk2wav
+package decoder
 
 import (
 	"bytes"
@@ -8,8 +8,8 @@ import (
 	"unsafe"
 )
 
-// #cgo CFLAGS: -I ./interface -I ./src
-// #include "silk.inl"
+// #cgo CFLAGS: -I ../interface -I ../src
+// #include "./silk.inl"
 import "C"
 
 func decode(buf []byte) []byte {

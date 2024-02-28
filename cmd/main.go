@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/arctan90/silk2wav"
 	"io/ioutil"
 	"log"
 	"os"
+	"silk2wav/decoder"
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 		return
 	}
 
-	out, err := silk2wav.Convert(data)
+	out, err := decoder.Convert(data)
 	if err != nil {
 		log.Println(err)
 		return
